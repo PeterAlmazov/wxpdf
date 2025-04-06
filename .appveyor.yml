@@ -37,7 +37,14 @@ before_build:
   - cmd: 7z x wxWidgets-3.2.7-headers.7z -oC:\wxWidgets -aoa
 
 # build script
-build_script: c:\projects\wxpdfdoc\admin\appveyor\appveyor.bat
+build_script:
+  - cd build
+  - msbuild /m:2 /v:n /p:Platform=%ARCH% /p:Configuration="%CONFIGURATION%" wxpdfdoc_vc17.sln %MSBUILD_LOGGER%
 
+artifacts:
+  - path: build\Release\*.dll
+    name: MyLibraryDLL
+  - path: build\Release\*.exe
+    name: MyExecutable
 # testing
 test_script: c:\projects\wxpdfdoc\admin\appveyor\appveyor-test.bat
