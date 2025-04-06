@@ -1,0 +1,15 @@
+C:\0\thirdparty\woff2\brotli\common\constants.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\constants.obj
+C:\0\thirdparty\woff2\brotli\common\context.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\context.obj
+C:\0\thirdparty\woff2\brotli\common\dictionary.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\dictionary.obj
+C:\0\thirdparty\woff2\brotli\common\platform.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\platform.obj
+C:\0\thirdparty\woff2\brotli\common\shared_dictionary.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\shared_dictionary.obj
+C:\0\thirdparty\woff2\brotli\common\transform.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\transform.obj
+C:\0\thirdparty\woff2\brotli\dec\bit_reader.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\bit_reader.obj
+C:\0\thirdparty\woff2\brotli\dec\decode.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\decode.obj
+C:\0\thirdparty\woff2\brotli\dec\huffman.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\huffman.obj
+C:\0\thirdparty\woff2\brotli\dec\state.c;C:\0\build\obj\libwoff2\vc17\Win32\Debug\state.obj
+C:\0\thirdparty\woff2\src\table_tags.cc;C:\0\build\obj\libwoff2\vc17\Win32\Debug\table_tags.obj
+C:\0\thirdparty\woff2\src\variable_length.cc;C:\0\build\obj\libwoff2\vc17\Win32\Debug\variable_length.obj
+C:\0\thirdparty\woff2\src\woff2_common.cc;C:\0\build\obj\libwoff2\vc17\Win32\Debug\woff2_common.obj
+C:\0\thirdparty\woff2\src\woff2_dec.cc;C:\0\build\obj\libwoff2\vc17\Win32\Debug\woff2_dec.obj
+C:\0\thirdparty\woff2\src\woff2_out.cc;C:\0\build\obj\libwoff2\vc17\Win32\Debug\woff2_out.obj

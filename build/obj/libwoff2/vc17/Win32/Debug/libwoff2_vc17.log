@@ -1,0 +1,21 @@
+﻿  constants.c
+  context.c
+  dictionary.c
+  platform.c
+  shared_dictionary.c
+  transform.c
+  bit_reader.c
+  decode.c
+  huffman.c
+  state.c
+  Generating Code...
+  table_tags.cc
+  variable_length.cc
+  woff2_common.cc
+  woff2_dec.cc
+C:\0\thirdparty\woff2\src\woff2_dec.cc(387,47): warning C4244: 'argument': conversion from 'uint64_t' to 'const unsigned int', possible loss of data
+C:\0\thirdparty\woff2\src\woff2_dec.cc(1258,56): warning C4244: 'argument': conversion from 'uint64_t' to 'const unsigned int', possible loss of data
+C:\0\thirdparty\woff2\src\woff2_dec.cc(1310,60): warning C4267: 'argument': conversion from 'size_t' to 'uint16_t', possible loss of data
+  woff2_out.cc
+  Generating Code...
+  libwoff2_vc17.vcxproj -> C:\0\build\lib\vc17\Win32\Debug\libwoff2.lib
