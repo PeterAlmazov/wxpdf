@@ -44,5 +44,7 @@ build_script:
 artifacts:
   - path: lib/**/*
     name: MyLibraryDLL
+  - path: build/bin/**/*
+    name: MyLibraryDLL
 # testing
 test_script: c:\projects\wxpdfdoc\admin\appveyor\appveyor-test.bat
