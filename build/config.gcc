@@ -1,0 +1,143 @@
+# =====================================================================
+# Configuration file for gcc builds
+# =====================================================================
+
+# Set default compilers
+CC = gcc
+CXX = g++
+
+# Path to root directory of wxWidgets
+wxRootDir ?= $(WXWIN)
+
+# Short version number of wxWidgets
+wxShortVersionString ?= 32
+
+# wxWidgets toolkit prefix
+wxToolkitPrefix ?= msw
+
+# Compiler prefix
+# Note: wxWidgets offers pre-compiled library versions for MinGW 5.1, 7.3, and 8.1
+# For these versions use compiler prefixes "gcc510TDM" resp "gcc730" resp "gcc810"
+wxCompilerPrefix ?= gcc
+
+# Monolithic wxWidgets build
+# Set to 1 to enable
+wxMonolithic ?= 0
+
+# Flavour of component library (postfix for library name)
+#wxFlavour ?= _$(wxToolkitPrefix)$(wxShortVersionString)u
+wxFlavour ?=
+
+# Configuration of wxWidgets library
+wxCfg ?=
+
+# Vendor of wxWidgets library
+wxVendor ?= 
+
+### Configuration dependent settings
+
+ifeq ($(config),debug_win32)
+wxArchSuffix =
+wxSuffix = ud
+wxSuffixDebug = d
+wxLibTypeSuffix = lib
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)/
+endif
+
+ifeq ($(config),debug_win64)
+wxArchSuffix = _x64
+wxSuffix = ud
+wxSuffixDebug = d
+wxLibTypeSuffix = lib
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)/
+endif
+
+ifeq ($(config),release_win32)
+wxArchSuffix =
+wxSuffix = u
+wxSuffixDebug =
+wxLibTypeSuffix = lib
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)/
+endif
+
+ifeq ($(config),release_win64)
+wxArchSuffix = _x64
+wxSuffix = u
+wxSuffixDebug =
+wxLibTypeSuffix = lib
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)/
+endif
+
+ifeq ($(config),debug_wxdll_win32)
+wxArchSuffix =
+wxSuffix = ud
+wxSuffixDebug = d
+wxLibTypeSuffix = lib
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)/
+endif
+
+ifeq ($(config),debug_wxdll_win64)
+wxArchSuffix = _x64
+wxSuffix = ud
+wxSuffixDebug = d
+wxLibTypeSuffix = lib
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)/
+endif
+
+ifeq ($(config),release_wxdll_win32)
+wxArchSuffix =
+wxSuffix = u
+wxSuffixDebug =
+wxLibTypeSuffix = lib
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)/
+endif
+
+ifeq ($(config),release_wxdll_win64)
+wxArchSuffix = _x64
+wxSuffix = u
+wxSuffixDebug =
+wxLibTypeSuffix = lib
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)/
+endif
+
+ifeq ($(config),debug_dll_win32)
+wxArchSuffix =
+wxSuffix = ud
+wxSuffixDebug = d
+wxLibTypeSuffix = dll
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)dll/
+endif
+
+ifeq ($(config),debug_dll_win64)
+wxArchSuffix = _x64
+wxSuffix = ud
+wxSuffixDebug = d
+wxLibTypeSuffix = dll
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)dll/
+endif
+
+ifeq ($(config),release_dll_win32)
+wxArchSuffix =
+wxSuffix = u
+wxSuffixDebug =
+wxLibTypeSuffix = dll
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)dll/
+endif
+
+ifeq ($(config),release_dll_win64)
+wxArchSuffix = _x64
+wxSuffix = u
+wxSuffixDebug =
+wxLibTypeSuffix = dll
+wxIntRootDir = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)dll/
+endif
+
+wxOutDirName = $(wxCompilerPrefix)$(wxArchSuffix)_$(wxLibTypeSuffix)$(wxCfg)
+wxOutDir = ../lib/$(wxOutDirName)/
+
+wxIncSubDir = $(wxToolkitPrefix)$(wxSuffix)
+wxToolkitDllNamePrefix = wx$(wxToolkitPrefix)$(wxShortVersionString)$(wxSuffix)_
+wxToolkitDllNameSuffix = _$(wxCompilerPrefix)$(wxArchSuffix)_$(wxVendor)
+wxToolkitLibNamePrefix = wx$(wxToolkitPrefix)$(wxShortVersionString)$(wxSuffix)_
+wxBaseLibNamePrefix = wxbase$(wxShortVersionString)$(wxSuffix)
+wxMonolithicLibName = wx$(wxToolkitPrefix)$(wxShortVersionString)$(wxSuffix)
