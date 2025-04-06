@@ -42,9 +42,7 @@ build_script:
   - msbuild /m:2 /v:n /p:Platform=%ARCH% /p:Configuration="%CONFIGURATION%" wxpdfdoc_vc17.sln %MSBUILD_LOGGER%
 
 artifacts:
-  - path: build\lib\*.dll
+  - path: build/lib/**/*
     name: MyLibraryDLL
-  - path: build\lib\*.exe
-    name: MyExecutable
 # testing
 test_script: c:\projects\wxpdfdoc\admin\appveyor\appveyor-test.bat
