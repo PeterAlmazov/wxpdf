@@ -1,4 +1,4 @@
 git status
 git add .
-git commit -m "Описание ваших изменений5"
+git commit -m "new"
 git push origin main
